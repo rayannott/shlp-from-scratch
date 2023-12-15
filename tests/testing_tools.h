@@ -1,0 +1,2 @@
+#define IS_TRUE(x) { if (!(x)) {std::cout << "[!] " << __FUNCTION__ << " failed on line " << __LINE__ << ": assert failed" << std::endl;} else {std::cout << __FUNCTION__ << "(line " << __LINE__ << "): passed" << std::endl;} }
+#define THROWS(x) {try { x; std::cout << "[!] " << __FUNCTION__ << " failed on line " << __LINE__ << ": exception not thrown" << std::endl; } catch (const std::exception &e) {std::cout << __FUNCTION__ << "(line " << __LINE__ << "): exception thrown with message\n\t" << e.what() << std::endl;} }
